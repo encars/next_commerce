@@ -23,11 +23,10 @@ export default function Modal() {
             setLoading(true);
             const product = await getProduct(id);
             setProduct(product);
+            setLoading(false);
         }
 
         fetchProduct();
-
-        setLoading(false);
     }, [id]);
 
     return (
